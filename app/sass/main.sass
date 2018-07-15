@@ -1,0 +1,138 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+.main__wrapper
+	position: relative
+	width: 100%
+	padding-left: 80px
+	.top__pannel
+		height: 80px
+		width: 100%
+		background-color: $accent-color
+		p
+			padding: 0
+			margin: 0
+.left__pannel
+	width: 80px
+	height: 100%
+	background-color: $accent-color
+	position: fixed
+	display: flex
+	flex-direction: column
+	align-content: center
+	left: 0
+	top: 0
+	z-index: 1001
+	.logo
+		display: flex
+		flex-direction: row
+		justify-content: center
+		padding-top: 15px
+		img
+			width: 50%
+			height: 50%
+	.left__pannel_menu
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		z-index: 1001
+		.left__pannel_menu_button
+			margin-top: 40px
+			height: 100%
+			&:hover
+				cursor: pointer
+				.line_1
+					width: 35px
+				.line_2
+					width: 35px
+				.line_3
+					width: 35px
+			.line_1
+				display: block
+				width: 25px
+				height: 2px
+				margin-bottom: 5px
+				transition: all .5s ease
+				background-color: $accent-color2
+				position: relative
+			.line_2
+				display: block
+				width: 15px
+				height: 2px
+				background-color: $accent-color2
+				margin-bottom: 5px
+				transition: all .5s ease
+				position: relative
+			.line_3
+				display: block
+				width: 2px
+				height: 2px
+				background-color: $accent-color2
+				margin-bottom: 5px
+				transition: all .5s ease
+				z-index: 0
+			.menu_text
+				display: block
+				color: rgba(255,255,255,.41)
+				text-transform: uppercase
+				font-size: 11px
+				z-index: 100
+				padding-top: 20px
+		.menu_active
+
+			.line_1
+				width: 35px!important
+				transform-origin: center
+				transform: rotate(45deg)
+				top: 7px
+				left: 0px
+			.line_2
+				width: 35px!important
+				transform-origin: center
+				transform: rotate(-45deg)
+				left: 0px
+			.line_3
+				visibility: hidden
+				transition: all 0s ease
+.sec_2
+	background-color: red
+	p
+		margin: 0
+		padding: 0
+@import "media" // Всегда в конце
+@import "owl/owl.carousel.min.css"
+@import "owl/owl.theme.default.min.css"
